@@ -6,37 +6,79 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Приветствие</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/Mainstyle.css">
   </head>
 <body>
   <div class="container mt-4">
-    <?php
-    if($_COOKIE['user']==''):
-    ?>
     <IMG class="displayed" src="/Assets/MainLogo.png">
-    <div class ="row">
-      <div class="col">
-        <h1 id="MainForms">Форма регистрации</h1>
-        <form action="check.php" method="post">
-          <input type="text" name="login" class="form-control" id="login" placeholder="Введите логин"><br>
-          <input type="text" name="name" class="form-control" id="name" placeholder="Введите имя"><br>
-          <input type="password" name="pass" class="form-control" id="pass" placeholder="Введите пароль"><br>
-          <button class="btn btn-success" type=submit>Зарегистрировать</button>
-        </form>
-      </div>
-      <div class="col">
-        <h1 id="MainForms">Форма авторизации</h1>
-        <form action="auth.php" method="post">
-          <input type="text" name="login" class="form-control" id="login" placeholder="Введите логин"><br>
-          <input type="password" name="pass" class="form-control" id="pass" placeholder="Введите пароль"><br>
-          <button class="btn btn-success" type=submit>Авторизоваться</button>
-        </form>
-      </div>
-    <?php else:?>
-      <p>Привет <?=$_COOKIE['user']?>. Чтобы выйти нажмите <a href ="/exit.php">здесь</a>.</p>
-    <?php endif;?>
-
+    <div class="main">
+    	<span>И</span>
+    	<span>Н</span>
+    	<span>Ф</span>
+    	<span>О</span>
+    	<span>Р</span>
+      <span>М</span>
+      <span>А</span>
+      <span>Ц</span>
+      <span>И</span>
+    	<span class="letter"></span>
+    	<span>Н</span>
+    	<span>Н</span>
+      <span>О</span>
+      <span>-</span>
+      <span>С</span>
+    	<span>П</span>
+    	<span>Р</span>
+    	<span>А</span>
+    	<span>В</span>
+      <span>О</span>
+      <span>Ч</span>
+      <span>Н</span>
+      <span>А</span>
+      <span>Я</span>
+      <span> </span>
+      <span>С</span>
+      <span>И</span>
+      <span>С</span>
+      <span>Т</span>
+      <span>Е</span>
+      <span>М</span>
+      <span>А</span>
     </div>
-  </div>
-</body>
+    <div class="main">
+    <span>Т</span>
+    <span>У</span>
+    <span>Р</span>
+    <span>И</span>
+    <span>С</span>
+    <span>Т</span>
+    <span> </span>
+    <span>В</span>
+    <span> </span>
+    <span>Р</span>
+    <span>О</span>
+    <span>С</span>
+    <span>С</span>
+    <span>И</span>
+    <span>И</span>
+    </div>
+    <div class ="row">
+        <div class="col">
+        <form action="registration.php">
+        <button id="MainButton" class="btn btn-success">Зарегистрироваться</button>
+        </form>
+      </div>
+        <div class="col">
+         <form action="login.php">
+           <button id="MainButton1" class="btn btn-success">Авторизоваться</button>
+         </form>
+       </div>
+       <div class="col">
+         <form action="guest.php">
+           <button id="MainButton1" class="btn btn-success">Войти как гость</button>
+         </form>
+       </div>
+     </div>
+   </div>
+  </body>
 </html>

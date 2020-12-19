@@ -1,16 +1,35 @@
+#ButtonExit{
+  display: block;
+	margin-top: 50px;
+	position: relative;
+  left: 40%;
+}
+
+
+#UserName {
+  display:block;
+  margin-top:5%;
+  font-size: 58px;
+  font-family: cursive;
+}
+
 form{
+  display:block;
+  position: relative;
+  left: 30%;
   width: 500px;
 }
 
-IMG.displayed {
-    margin-top:100px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto
+
+#MainLogo{
+  display:block;
+  margin-top:100px;
 }
 
 #MainForms{
-   margin-top:100px;
+  display:block;
+  text-align:center;
+  margin-top:100px;
 }
 
 body {
