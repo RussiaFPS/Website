@@ -1,3 +1,55 @@
+#VivodAdminsInfa{
+  margin-right:5%;
+  font-family: cursive;
+  font-size: 20px;
+}
+
+
+#DelLogin{
+  width: 300px;
+}
+
+#AddRole{
+  width: 300px;
+}
+
+#AddPass{
+  width: 300px;
+}
+
+#AddName{
+  width: 300px;
+}
+
+#AddLogin{
+  width: 300px;
+}
+
+#VivodInfa{
+  font-family: cursive;
+  font-size: 20px;
+}
+
+#textPoisk{
+  margin-top: 5%;
+  margin-left: center;
+  font-family: cursive;
+  font-size: 28px;
+}
+
+#Kontakt2{
+  margin-top: 1%;
+  font-size: 28px;
+  font-family: cursive;
+}
+
+#Kontakt{
+  margin-top: 15%;
+  font-size: 28px;
+  font-family: cursive;
+}
+
+
 #otzivName{
   margin-top: 10px;
   font-family: cursive;

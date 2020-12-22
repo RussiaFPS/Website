@@ -16,9 +16,9 @@
     <header id="header">
 	<nav class="links" style="--items: 5;">
     <a href="index.php">Стартовая страница</a>
-    <a href="#">Link 2</a>
+    <a href="information.php">Справочная</a>
     <a href="otziv.php">Отзывы</a>
-    <a href="#">Link 4</a>
+    <a href="about.php">Контакты</a>
     <a href="account.php">Личный кабинет</a>
     <span class="line"></span>
 	</nav>

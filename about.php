@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Отзывы</title>
+  <title>Контакты</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/menuStyle.css">
@@ -23,19 +23,10 @@
     <span class="line"></span>
 	</nav>
 </header>
-<div id="otzivtext" align="center">
-<p>Отзывы</p>
 </div>
+<div align="center">
+  <p id="Kontakt">Контактный телефон: 7(026)880-00-83</p>
+  <p id="Kontakt2">Адрес: Пресненская набережная, 12</p>
 </div>
 </body>
 </html>
-
-
-<?php
-$link=mysqli_connect('localhost', 'root', 'root', 'otzivi-bd');
-$sql = mysqli_query($link, 'SELECT `login`, `otziv`, `balli` FROM `otzivi`');
-while ($result = mysqli_fetch_array($sql)) {
-  ?><div class="head_info" align="center"><p id="otzivName"><?php echo "Пользователь: {$result['login']}";?></p> <p id="otzivName"><?php echo "Оценка: {$result['balli']}";?></p><textarea id="VivodOtziv" cols="70" rows="5" readonly><?php echo "{$result['otziv']}"; ?></textarea></div><?php
-  }
-$mysql->close();
-?>

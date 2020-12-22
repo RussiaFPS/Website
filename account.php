@@ -16,9 +16,9 @@
     <header id="header">
 	<nav class="links" style="--items: 5;">
 		<a href="index.php">Стартовая страница</a>
-		<a href="#">Link 2</a>
+		<a href="information.php">Справочная</a>
 		<a href="otziv.php">Отзывы</a>
-		<a href="#">Link 4</a>
+		<a href="about.php">Контакты</a>
 		<a href="account.php">Личный кабинет</a>
 		<span class="line"></span>
 	</nav>
@@ -38,6 +38,22 @@
     <button id="ButtonExit" class="btn btn-success">Выйти</button>
     </form>
   <?php endif;?>
+
+
+  <?php
+  $UserRole=$_COOKIE['user'];
+  $mysql = new mysqli('localhost', 'root', 'root', 'register-bd');
+  $result = $mysql->query("SELECT * FROM `users` WHERE `login`='$UserRole' AND `role`='admin'");
+  $user = $result->fetch_assoc();
+  if(count($user)!=0){
+    ?>
+    <form action="adminPanel.php">
+    <button id="ButtonExit" class="btn btn-success">Админ панель</button>
+    </form>
+    <?php
+  }
+  $mysql->close();
+    ?>
   </div>
 </body>
 </html>

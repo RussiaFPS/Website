@@ -54,8 +54,8 @@ $mysql = new mysqli('localhost', 'root', 'root', 'register-bd');
 $result = $mysql->query("SELECT * FROM `users` WHERE `login`='$login'");
 $user = $result->fetch_assoc();
 if(count($user)==0){
-  $mysql->query("INSERT INTO `users` (`login` , `pass` , `name`)
-  VALUES('$login','$pass','$name') ");
+  $mysql->query("INSERT INTO `users` (`login` , `pass` , `name`,`role`)
+  VALUES('$login','$pass','$name','user')");
   $mysql->close();
   echo"<script>swal(\"Успешно!\", \"Вы зарегистрировались успешно\", \"success\");</script>";
 }else{

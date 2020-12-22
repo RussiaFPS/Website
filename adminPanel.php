@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Главная</title>
+  <title>Админ панель</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/menuStyle.css">
@@ -23,6 +23,27 @@
 		<span class="line"></span>
 	</nav>
 </header>
-  </div>
+<div id="otzivtext" align="center">
+<p>Админ панель</p>
+</div>
+<div align="center" style="margin-right:37%;">
+<form action="ProcessingUsers.php">
+<button class="btn btn-success">Работа с пользовательской БД</button>
+</form>
+</div>
+</div>
 </body>
 </html>
+
+
+<?php
+$UserRole=$_COOKIE['user'];
+$mysql = new mysqli('localhost', 'root', 'root', 'register-bd');
+$result = $mysql->query("SELECT * FROM `users` WHERE `login`='$UserRole' AND `role`='admin'");
+$user = $result->fetch_assoc();
+if(count($user)==0){
+    header('Location:/index.php');
+}
+$mysql->close();
+
+?>
