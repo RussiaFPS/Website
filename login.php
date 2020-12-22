@@ -27,7 +27,7 @@
      <button class="btn btn-success" type=submit>Авторизоваться</button>
    </form>
  <?php else:
-    header('Location:/account.php');?>
+    header('Location:/main.php');?>
   <?php endif;?>
   </div>
 </body>

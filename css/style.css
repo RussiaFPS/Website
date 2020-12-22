@@ -1,14 +1,85 @@
+#otzivName{
+  margin-top: 10px;
+  font-family: cursive;
+  font-size: 18px;
+}
+
+#SpisokOtzivovButton{
+  display:block;
+  position: relative;
+  margin-top: 20px;
+}
+
+.head_info{
+display:block;
+position: relative;
+z-index: -10;
+}
+
+#otziv{
+  color:#ffffff;
+  background: #2a2d36;
+}
+
+#VivodOtziv{
+  color: 	#ffffff;
+   background: #2a2d36;
+  margin-top: 10px;
+  position: relative;
+  resize: none;
+}
+
+select{
+  position: relative;
+  resize: none;
+}
+
+#textBall{
+  font-family: cursive;
+    font-size: 18px;
+}
+
+
+textarea {
+    resize: none;
+}
+
+#otzivtext{
+  margin-top: 15%;
+  display:block;
+  font-size: 58px;
+  font-family: cursive;
+}
+
+#Avatar{
+  display:block;
+  margin-top:100px;
+}
+
+#AccountHello2{
+  display:block;
+  font-size: 18px;
+  font-family: cursive;
+}
+
+#AccountHello{
+  display:block;
+  font-size: 58px;
+  font-family: cursive;
+}
+
+
 #ButtonExit{
+  margin: auto;
   display: block;
-	margin-top: 50px;
+	margin-top: 25px;
 	position: relative;
-  left: 40%;
 }
 
 
 #UserName {
   display:block;
-  margin-top:5%;
+  margin-top: 20%;
   font-size: 58px;
   font-family: cursive;
 }

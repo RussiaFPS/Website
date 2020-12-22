@@ -27,7 +27,7 @@
      <button class="btn btn-success" type=submit>Авторизоваться</button>
    </form>
  <?php else:
-    header('Location:/account.php');?>
+    header('Location:/main.php');?>
   <?php endif;?>
   </div>
 </body>
@@ -52,5 +52,5 @@ setcookie('user',$user['name'],time() + 3600,"/");
 
 $mysql->close();
 
-echo"<script>swal(\"Успешно!\", \"Вы успешно авторизовались\", \"success\");</script>";
+header('Location:/main.php');
 ?>

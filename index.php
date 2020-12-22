@@ -73,11 +73,15 @@
            <button id="MainButton1" class="btn btn-success">Авторизоваться</button>
          </form>
        </div>
+       <?php
+   if($_COOKIE['user']==''):
+   ?>
        <div class="col">
-         <form action="guest.php">
+         <form action="main.php">
            <button id="MainButton1" class="btn btn-success">Войти как гость</button>
          </form>
        </div>
+       <?php endif;?>
      </div>
    </div>
   </body>

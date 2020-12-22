@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Личный кабинет</title>
+  <title>Главная</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/menuStyle.css">
+    <link rel="stylesheet" href="/css/menuStyle.css">
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
 <body>
@@ -23,21 +23,6 @@
 		<span class="line"></span>
 	</nav>
 </header>
-<div align="center" >
-<input type="image" id="Avatar" src="Assets/Avatar.png">
-</div>
-    <div align="center" >
-  <?php
-  if($_COOKIE['user']==''):?>
-<p id="AccountHello">Гость</p>
-<p id="AccountHello2">Хотите <a href ="/registration.php">зарегистрироваться</a> или <a href ="/login.php">авторизоваться</a>?</p>
-<?php else:?>
-    <p id="AccountHello"><?=$_COOKIE['user']?></p>
-        </div>
-    <form action="exit.php">
-    <button id="ButtonExit" class="btn btn-success">Выйти</button>
-    </form>
-  <?php endif;?>
   </div>
 </body>
 </html>
