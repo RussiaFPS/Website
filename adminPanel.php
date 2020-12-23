@@ -28,7 +28,10 @@
 </div>
 <div align="center" style="margin-right:37%;">
 <form action="ProcessingUsers.php">
-<button class="btn btn-success">Работа с пользовательской БД</button>
+<button class="btn btn-success">Работа с аккаунтами пользователей</button>
+</form>
+<form action="ProcessingInfa.php">
+<button class="btn btn-success" style="margin-top:5%;">Работа со справочной информацией</button>
 </form>
 </div>
 </div>
