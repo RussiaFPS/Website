@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/menuStyle.css">
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <meta name=viewport content="width=1000">
   </head>
 <body>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -32,6 +33,11 @@
 
 $UserRole=$_COOKIE['user'];
 $mysql = new mysqli('localhost', 'root', 'root', 'register-bd');
+
+if ($mysql->connect_error) {
+    die("<script>swal(\"Ошибка!\", \"Не удается установить соединение с базой данных\", \"error\");</script>");
+}
+
 $result = $mysql->query("SELECT * FROM `users` WHERE `login`='$UserRole' AND `role`='admin'");
 $user = $result->fetch_assoc();
 if(count($user)==0){
@@ -41,6 +47,10 @@ $mysql->close();
 
 
 $mysql = new mysqli('localhost', 'root', 'root', 'infa-bd');
+
+if ($mysql->connect_error) {
+    die("<script>swal(\"Ошибка!\", \"Не удается установить соединение с базой данных\", \"error\");</script>");
+}
 
 $sql = $mysql->query("SELECT * FROM `infa` WHERE `gorod`!=''");
     ?><div class="head_info" align="center">
@@ -112,12 +122,21 @@ $mysql->close();
   <button id="buttonAddUsers" class="btn btn-success" type=submit style="margin-left:20%;">Добавить информацию</button>
 </form>
 </div>
-
+<div style="margin-top:1%;">
+<form action="ProcessingInfa.php">
+  <button id="buttonAddUsers" class="btn btn-success" style="margin-left:20%;">Обновить информацию в таблице</button>
+</form>
+</div>
 </body>
 </html>
 <?php
 $UserRole=$_COOKIE['user'];
 $mysql = new mysqli('localhost', 'root', 'root', 'register-bd');
+
+if ($mysql->connect_error) {
+    die("<script>swal(\"Ошибка!\", \"Не удается установить соединение с базой данных\", \"error\");</script>");
+}
+
 $result = $mysql->query("SELECT * FROM `users` WHERE `login`='$UserRole' AND `role`='admin'");
 $user = $result->fetch_assoc();
 if(count($user)==0){
@@ -128,6 +147,10 @@ $mysql->close();
 $id=filter_var(trim($_POST['DelId']), FILTER_SANITIZE_STRING);
 
 $mysql = new mysqli('localhost', 'root', 'root', 'infa-bd');
+
+if ($mysql->connect_error) {
+    die("<script>swal(\"Ошибка!\", \"Не удается установить соединение с базой данных\", \"error\");</script>");
+}
 
 $result = $mysql->query("SELECT * FROM `infa` WHERE `id`='$id'");
 $user = $result->fetch_assoc();

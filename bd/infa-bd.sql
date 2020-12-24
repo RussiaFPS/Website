@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 23, 2020 at 09:59 AM
+-- Generation Time: Dec 24, 2020 at 06:00 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -47,7 +47,6 @@ INSERT INTO `infa` (`id`, `gorod`, `dos`, `typeDos`, `cafe`, `checkCafe`) VALUES
 (3, 'Москва', 'Зарядье', 'Парк', 'Obed Bufet', '800 руб'),
 (4, 'Москва', 'Москва-Сити', 'Современная архитектура', 'Кофемания', '200 руб'),
 (5, 'Москва', 'Большой театр', 'Объект культурного наследия', 'Журавли', '500 руб'),
-(6, 'Санкт-Петербург', 'Петергоф', 'Памятник архитектуры', 'Троицкий Мост', '700 руб'),
 (7, 'Санкт-Петербург', 'Эрмитаж', 'Музей', 'Африка', '900 руб'),
 (8, 'Санкт-Петербург', 'Александринский театр', 'Объект культурного наследия', 'Зингеръ', '1200 руб'),
 (9, 'Санкт-Петербург', 'Петропавловская крепость', 'Памятник архитектуры', 'Мясорубка', '650 руб'),
@@ -76,7 +75,7 @@ ALTER TABLE `infa`
 -- AUTO_INCREMENT for table `infa`
 --
 ALTER TABLE `infa`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

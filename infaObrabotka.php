@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/menuStyle.css">
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <meta name=viewport content="width=1000">
   </head>
 <body>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -42,6 +43,10 @@ if($_POST['cryt']=="Достопримечательности"){
 
 
 $mysql = new mysqli('localhost', 'root', 'root', 'infa-bd');
+
+if ($mysql->connect_error) {
+    die("<script>swal(\"Ошибка!\", \"Не удается установить соединение с базой данных\", \"error\");</script>");
+}
 
 $sql = $mysql->query("SELECT * FROM `infa` WHERE `gorod`='$gorod' ");
   if($tip==0){

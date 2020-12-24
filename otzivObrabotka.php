@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/menuStyle.css">
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <meta name=viewport content="width=1000">
   </head>
 <body>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -63,6 +64,10 @@ if($_COOKIE['user']==''){
 
 
 $mysql = new mysqli('localhost', 'root', 'root', 'otzivi-bd');
+
+if ($mysql->connect_error) {
+    die("<script>swal(\"Ошибка!\", \"Не удается установить соединение с базой данных\", \"error\");</script>");
+}
 
 $mysql->query("INSERT INTO `otzivi` (`login` , `otziv` , `balli`)
 VALUES('$login','$otziv','$balli') ");

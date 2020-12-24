@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/menuStyle.css">
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <meta name=viewport content="width=1000">
+    <meta name=viewport content="width=1000">
   </head>
 <body>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

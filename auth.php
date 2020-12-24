@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/style.css">
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <meta name=viewport content="width=1000">
   </head>
 <body>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -41,10 +42,15 @@ $pass = md5($pass."QafjhgjgH74");
 
 $mysql = new mysqli('localhost', 'root', 'root', 'register-bd');
 
+if ($mysql->connect_error) {
+    die("<script>swal(\"Ошибка!\", \"Не удается установить соединение с базой данных\", \"error\");</script>");
+}
+
 $result = $mysql->query("SELECT * FROM `users` WHERE `login`='$login' AND `pass` = '$pass'");
 $user = $result->fetch_assoc();
 if(count($user)==0){
 echo"<script>swal(\"Такой пользователь не найден!\", \"Данный пользователь не зарегистрирован\", \"error\");</script>";
+$mysql->close();
 exit();
 }
 

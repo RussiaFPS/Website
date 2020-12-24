@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/menuStyle.css">
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <meta name=viewport content="width=1000">
   </head>
 <body>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -59,6 +60,11 @@
 <?php
 $UserRole=$_COOKIE['user'];
 $mysql = new mysqli('localhost', 'root', 'root', 'register-bd');
+
+if ($mysql->connect_error) {
+    die("<script>swal(\"Ошибка!\", \"Не удается установить соединение с базой данных\", \"error\");</script>");
+}
+
 $result = $mysql->query("SELECT * FROM `users` WHERE `login`='$UserRole' AND `role`='admin'");
 $user = $result->fetch_assoc();
 if(count($user)==0){
@@ -75,6 +81,10 @@ if (mb_strlen($login) < 3 || mb_strlen($login) > 90) {
     exit();
 }
 $mysql = new mysqli('localhost', 'root', 'root', 'register-bd');
+
+if ($mysql->connect_error) {
+    die("<script>swal(\"Ошибка!\", \"Не удается установить соединение с базой данных\", \"error\");</script>");
+}
 
 $result = $mysql->query("SELECT * FROM `users` WHERE `login`='$login'");
 $user = $result->fetch_assoc();

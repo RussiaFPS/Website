@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/menuStyle.css">
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <meta name=viewport content="width=1000">
   </head>
 <body>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -32,10 +33,10 @@
 
 
 <?php
-$link=mysqli_connect('localhost', 'root', 'root', 'otzivi-bd');
+$link=mysqli_connect('localhost', 'root', 'root', 'otzivi-bd') or die ("<script>swal(\"Ошибка!\", \"Не удается установить соединение с базой данных\", \"error\");</script>");
 $sql = mysqli_query($link, 'SELECT `login`, `otziv`, `balli` FROM `otzivi`');
 while ($result = mysqli_fetch_array($sql)) {
   ?><div class="head_info" align="center"><p id="otzivName"><?php echo "Пользователь: {$result['login']}";?></p> <p id="otzivName"><?php echo "Оценка: {$result['balli']}";?></p><textarea id="VivodOtziv" cols="70" rows="5" readonly><?php echo "{$result['otziv']}"; ?></textarea></div><?php
   }
-$mysql->close();
+mysqli_close($link);
 ?>
